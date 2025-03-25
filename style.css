@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&display=swap');
+
+body {
+    font-family: 'Jost', sans-serif;
+}
+
+body {
+    
+    text-align: center;
+    background-color: #f8ddcb
+}
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background: #f7f7f2;
+    border-radius: 10px;
+    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.quizMain {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.quizTitle {
+    background: #61603c;
+    margin: 0;
+    margin-bottom: 30px;
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.quizItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.quizItemQuest {
+    background: #f8b3cc;
+        color: rgb(47, 8, 8);
+        padding: 20px;
+        margin: 10px 0;
+        border-radius: 20px;
+        width: 350px;
+        font-weight: bold;
+        font-size: 17px
+}
+
+.quizItemAnswer {
+    padding: 15px;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 30px;
+    background: #d3d3d3;
+    cursor: pointer;
+    width: 150px;
+    font-weight: bold;
+    font-size: 16px
+}
+
+.correct {
+    background-color: green;
+    color: white;
+}
+
+.wrong {
+    background-color: red;
+    color: white;
+}
+
+.highlight {
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+}
