@@ -69,10 +69,14 @@ body {
 }
 
 .wrong {
-    background-color: red;
+    background-color: rgb(213, 12, 12);
     color: white;
 }
 
 .highlight {
     box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+}
+
+.highlightbad{
+    box-shadow: 0 0 15px rgba(196, 84, 97, 0.8);
 }

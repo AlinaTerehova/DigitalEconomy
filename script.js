@@ -15,24 +15,18 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".quizItem").forEach(item => {
         const questionText = item.querySelector(".quizItemQuest").textContent.trim();
         const buttons = item.querySelectorAll(".quizItemAnswer");
-        
+
         buttons.forEach(button => {
             button.addEventListener("click", () => {
                 const isCorrect = button.textContent.trim() === correctAnswers[questionText];
-                
-                if (button.classList.contains("correct") || button.classList.contains("wrong")) {
-                    // Сброс состояния кнопки
-                    buttons.forEach(btn => btn.classList.remove("correct", "wrong", "highlight"));
+
+                // Сбрасываем состояния всех кнопок в вопросе
+                buttons.forEach(btn => btn.classList.remove("correct", "wrong", "highlight", "highlightbad"));
+
+                if (isCorrect) {
+                    button.classList.add("correct", "highlight");
                 } else {
-                    // Удаляем классы у всех кнопок в этом вопросе
-                    buttons.forEach(btn => btn.classList.remove("correct", "wrong", "highlight"));
-                    
-                    // Применяем нужные стили
-                    if (isCorrect) {
-                        button.classList.add("correct", "highlight");
-                    } else {
-                        button.classList.add("wrong");
-                    }
+                    button.classList.add("wrong", "highlightbad");
                 }
             });
         });
